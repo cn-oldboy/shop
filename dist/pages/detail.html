@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Document</title><link rel=stylesheet href=../css/site.min.css><link rel=stylesheet href=../css/detail.css><link rel=stylesheet href=../lib/bootstrap/dist/css/bootstrap.min.css><script src=../lib/jquery/dist/jquery.min.js></script><script src=../lib/bootstrap/dist/js/bootstrap.min.js></script><style lang="">.logo img{height:20px;width:20px}</style></head><body><div class=container><nav class="navbar navbar-inverse"><div class=container-fluid><div class=navbar-header><button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=#bs-example-navbar-collapse-1 aria-expanded=false><span class=sr-only>Toggle navigation</span> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span></button> <a class="navbar-brand logo pull-left" href=#><img alt=Brand src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAB+0lEQVR4AcyYg5LkUBhG+1X2PdZGaW3btm3btm3bHttWrPomd1r/2Jn/VJ02TpxcH4CQ/dsuazWgzbIdrm9dZVd4pBz4zx2igTaFHrhvjneVXNHCSqIlFEjiwMyyyOBilRgGSqLNF1jnwNQdIvAt48C3IlBmHCiLQHC2zoHDu6zG1iXn6+y62ScxY9AODO6w0pvAqf23oSE4joOfH6OxfMoRnoGUm+de8wykbFt6wZtA07QwtNOqKh3ZbS3Wzz2F+1c/QJY0UCJ/J3kXWJfv7VhxCRRV1jGw7XI+gcO7rEFFRvdYxydwcPsVsC0bQdKScngt4iUTD4Fy/8p7PoHzRu1DclwmgmiqgUXjD3oTKHbAt869qdJ7l98jNTEblPTkXMwetpvnftA0LLHb4X8kiY9Kx6Q+W7wJtG0HR7fdrtYz+x7iya0vkEtUULIzCjC21wY+W/GYXusRH5kGytWTLxgEEhePPwhKYb7EK3BQuxWwTBuUkd3X8goUn6fMHLyTT+DCsQdAEXNzSMeVPAJHdF2DmH8poCREp3uwm7HsGq9J9q69iuunX6EgrwQVObjpBt8z6rdPfvE8kiiyhsvHnomrQx6BxYUyYiNS8f75H1w4/ISepDZLoDhNJ9cdNUquhRsv+6EP9oNH7Iff2A9g8h8CLt1gH0Qf9NMQAFnO60BJFQe0AAAAAElFTkSuQmCC> </a><a class=navbar-brand href=#>Bs小米商城</a></div><div class="collapse navbar-collapse" id=bs-example-navbar-collapse-1><ul class="nav navbar-nav"><li><a href=./index.html>首页 <span class=sr-only>(current)</span></a></li><li class=dropdown><a href=./list.html>演唱会列表</a></li><li class=active><a href=./detail.html>演唱会详情</a></li></ul><ul class="nav navbar-nav navbar-right"><li><a href=#><span class="glyphicon glyphicon-shopping-cart"></span>购物车<span class=badge>4</span></a></li></ul><ul class="nav navbar-nav navbar-right"><li><a href=./login.html>登录</a></li><li><a href=./reg.html>注册</a></li></ul><form class="navbar-form navbar-right"><div class=form-group><input type=text class=form-control placeholder=搜索商品></div><button type=submit class="btn btn-default">搜索</button></form></div></div></nav></div><div class=container><ul class=breadcrumb><li><a href=./index.html>首页</a></li><li><a href=./list.html>演唱会列表</a></li></ul><div class=well><div class=row><div class="col-md-3 pic"><img src="" alt=""></div><div class="col-md-9 des"><div class=text-center><button class="btn btn-info">添加购物车</button> <button class="btn btn-danger">立刻购买</button></div></div></div></div></div><script>let  pic =""
+            let  des =""
+            let  posi =""
+            // let detail = localStorage.detail
+            const detail = JSON.parse(localStorage.detail)
+            console.log(detail)
+            
+            render()
+            function  render(){
+                pic=`
+                <img src="${ detail.verticalPic}" alt="">
+                `
+                $('.pic').html(pic)
+
+                posi=`
+                <li class="active">${ detail.actors}</li>
+                `
+                $('.breadcrumb').append(posi)
+
+                des=`
+                <ul class="list-group">
+                    <li class="list-group-item">演唱会名字：${ detail.name}</li>
+                    <li class="list-group-item">演唱会状态：${ detail.showstatus}</li>
+                    <li class="list-group-item">演唱会时间：${ detail.showtime}</li>
+                    <li class="list-group-item">演唱会城市：${ detail.cityname}</li>
+                    <li class="list-group-item">演唱会地点：${ detail.venue}</li>
+                    <li class="list-group-item">演唱会价格：${ detail.price}元</li>
+                </ul>
+                `
+                $('.des').prepend(des)
+
+            }</script><footer class=footer><div class=container><div class="row footer-top"><div class="col-md-6 col-lg-6"><h4><img src=https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.11/dist/img/logo.png></h4><p>我们一直致力于为广大开发者提供更多的优质技术文档和辅助开发工具！</p></div><div class="col-md-6 col-lg-6"><div class="row about"><div class=col-sm-3><h4>关于</h4><ul class=list-unstyled><li><a href=/about/ >关于我们</a></li><li><a href=/ad/ >广告合作</a></li><li><a href=/links/ >友情链接</a></li><li><a href=/hr/ >招聘</a></li></ul></div><div class=col-sm-3><h4>联系方式</h4><ul class=list-unstyled><li><a href=https://weibo.com/bootcss title=Bootstrap中文网官方微博 target=_blank>新浪微博</a></li><li><a href=mailto:admin@bootcss.com>电子邮件</a></li></ul></div><div class=col-sm-3><h4>旗下网站</h4><ul class=list-unstyled><li><a href=https://www.bootcdn.cn/ target=_blank>BootCDN</a></li><li><a href=https://pkg.phpcomposer.com/ target=_blank>Packagist中国镜像</a></li></ul></div><div class=col-sm-3><h4>特别致谢</h4><ul class=list-unstyled><li><a href=https://www.maoyuncloud.com/ target=_blank>猫云</a></li><li><a href=https://www.jdcloud.com/ target=_blank>京东云</a></li><li><a href=https://www.upyun.com target=_blank>又拍云</a></li></ul></div></div></div></div><hr><div class="row footer-bottom"><ul class="list-inline text-center"><li><a href=http://www.beian.miit.gov.cn/ target=_blank>京ICP备11008151号-6</a></li><li>京公网安备11010802014853</li></ul></div></div></footer></body></html>
